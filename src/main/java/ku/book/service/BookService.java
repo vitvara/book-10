@@ -30,8 +30,8 @@ public class BookService {
         return dtos;
     }
 
-    public void create(BookDto movieDto) {
-        Book book = modelMapper.map(movieDto, Book.class);
+    public void create(BookDto bookDto) {
+        Book book = modelMapper.map(bookDto, Book.class);
         book.setCreatedAt(Instant.now());
         repository.save(book);
     }
